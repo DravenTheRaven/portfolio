@@ -1,0 +1,397 @@
+:root {
+    --main-black: #020104;
+    --lighter-blue: #E1EFF6;
+    --main-purple: #60a3d9;
+    --main-powder-blue: #bfd7ed;
+    --main-gray: #6B717E;
+    --main-green: #758E4F;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+  body {
+    font-family: verdana; 
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height:1.4;
+   background: black;
+  
+  }
+  
+  #flex-body {
+    display: flex;
+    flex-direction: column;
+  }
+  #container {
+   background-image: url("./pictures/eastNashvillePics/0701.jpg");
+       background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #slide-show-div {
+     background-image: url("./pictures/buildingPics/0780.jpg");
+       background-size:     cover;
+         display: flex;
+    flex-direction: column;
+  }
+  
+  #contact-div {
+  
+   background-image: url("./pictures/buildingPics/0795.jpg");
+       background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1,
+  h2 {
+    font-family: arial;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 6rem;
+    margin-top: 0;
+    position: relative;
+    display: flex;
+  
+  }
+  
+  h2 {
+    font-size: 4.2rem;
+  
+  }
+  .sticky {
+  
+    left: 0;
+    width: 100%;
+      margin-bottom: 50px;
+  height: 50%;
+      position: -webkit-sticky;
+      position: sticky;
+  top: 0;
+  }
+  
+  
+  
+  nav {
+  
+    left: 0;
+    width: 100%;
+      margin-bottom: 0;
+  
+      position: -webkit-sticky;
+      position: sticky;
+  top: 0;
+  
+   
+  }
+  
+  .nav-list {
+    
+    margin-left: 0;
+  
+  
+  }
+  
+  @media (max-width: 28.75rem) {
+    .nav {
+  
+    
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-purple);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+    
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+  
+  .nav-list a {
+    display: flex;
+    flex-direction: row;
+  
+    font-size: 2.2 rem;
+    padding: 2rem;
+  }
+  
+  .nav-list a:hover {
+    transform: translateX(2px);
+  }
+  
+  li {
+   display: flex;
+   transition-duration: 0.5s;
+   flex-direction: row;
+   color: white;
+  }
+  
+  li:hover {
+    cursor: pointer;
+  }
+  
+  ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    
+    margin-left: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  
+  ul li:hover > ul,
+  ul li:focus-within > ul,
+  ul li ul:hover,
+  ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+     position: fixed;
+   display: flex;
+    flex-flow: row nowrap;  
+  
+  }
+  
+  ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+  
+  ul li ul li a {
+    position: relative;
+    left:2em; 
+    bottom:1.2em;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  
+  
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+  
+  }
+  
+  .welcome-section > p{
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: rgba(226,226,226,1);
+  }
+  
+  
+  .carousel-wrapper{
+    height:600px;
+    position:relative;
+    width:800px;
+    margin:0 auto;
+  }
+  .carousel-item{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px 50px;
+    opacity:0;
+    transition: all 0.5s ease-in-out;
+  }
+  .arrow{
+    border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 12px;
+  }
+  
+  .arrow-prev{
+    left:-30px;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%) rotate(135deg);
+  }
+   
+  .arrow-next{
+      right:-30px;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%) rotate(-45deg);
+    }
+  
+  .light{
+    color:white;
+  }
+  
+  @media (max-width: 480px) {
+        .arrow, .light .arrow {
+          background-size: 10px;
+          background-position: 10px 50%;
+        }
+      }
+  
+  
+  /*Select every element*/
+  [id^="item"] {
+      display: none;
+    }
+  
+  .item-1 {
+      z-index: 2;
+      opacity: 1;
+    background:url(./prints/silkScreen/smallSkylinePrint.jpg);
+    background-size:cover;
+    }
+  .item-2{
+    background:url(./pictures/naturePics/underbridge.jpg);
+     background-size:cover;
+  }
+  .item-3{
+    background:url(./pictures/naturePics/underbridge.jpg);
+     background-size:cover;
+  }
+  
+  *:target ~ .item-1 {
+      opacity: 0;
+    }
+  
+  #item-1:target ~ .item-1 {
+      opacity: 1;
+    }
+  
+  #item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+      z-index: 3;
+      opacity: 1;
+    }
+  
+  
+  
+  
+  
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+  
+   
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 6rem;
+    margin: 0px, 0px, 0px;
+   
+  }
+  
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
+  
+  .contact-section-header > p {
+    font-style: italic;
+  }
+  
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 980px;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .contact-details {
+      font-size: 2.4rem;
+      text-shadow: 1px 1px 1px #1f1f1f;
+      transition: transform 0.3s ease-out
+    }
+    
+    .contact-details:hover {
+      transform: translateY(8px);
+    }
+  
+  footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    
+    border-top: 2px solid #ac58c515
+  }
+  
+  footer > p {
+    margin: 2rem;
+  }
+  
+  footer i {
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 28.75em) {
+    footer {
+      flex-direction: column; 
+      text-align: center;
+    }
+  }
